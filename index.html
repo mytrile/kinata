@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Kinata : Simple gem for getting info about cinemas in Sofia" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Kinata</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/mytrile/kinata">Fork Me on GitHub</a>
+
+          <h1 id="project_title">Kinata</h1>
+          <h2 id="project_tagline">Simple gem for getting info about cinemas in Sofia</h2>
+
+          <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/mytrile/kinata/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="https://github.com/mytrile/kinata/tarball/master">Download this project as a tar.gz file</a>
+          </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>Kinata</h1>
+
+<p>Kinata is simple gem for getting information about cinemas and movies in Sofia</p>
+
+<h1>Installation</h1>
+
+<pre><code>$ gem install kinata
+</code></pre>
+
+<h1>Usage</h1>
+
+<h2>Cinemas</h2>
+
+<p>Available cinemas:</p>
+
+<ul>
+<li>:arena_zapad</li>
+<li>:arena_mall</li>
+<li>:arena_mladost</li>
+<li>:mtel_imax</li>
+<li>:cinema_city</li>
+<li>:euro_cinema</li>
+<li>:vlaikova</li>
+<li>:dom_na_kinoto</li>
+</ul><div class="highlight">
+<pre><span class="n">cinema</span> <span class="o">=</span> <span class="no">Kinata</span><span class="o">::</span><span class="no">Cinema</span><span class="o">.</span><span class="n">new</span> <span class="ss">:arena_zapad</span>
+
+<span class="n">cinema</span><span class="o">.</span><span class="n">name</span> <span class="c1"># Арена Запад</span>
+
+<span class="n">cinema</span><span class="o">.</span><span class="n">address</span> <span class="c1"># София, ж.к. Илинден, бул. Тодор Александров 64, до метростанция Вардар</span>
+
+<span class="n">cinema</span><span class="o">.</span><span class="n">phone</span> <span class="c1"># "028127700"</span>
+
+<span class="n">cinema</span><span class="o">.</span><span class="n">coordinates</span> <span class="c1"># ["23290334", "42705008"]</span>
+
+<span class="n">cinema</span><span class="o">.</span><span class="n">movies</span> <span class="c1"># [{"name"=&gt;"Весели крачета 2", "id"=&gt;"69921", "dates"=&gt; ["2012-01-30 11:40:00", "2012-01-30 13:40:00", "2012-01-30 15:40:00"]}</span>
+
+</pre>
+</div>
+
+
+<h2>Movies</h2>
+
+<div class="highlight">
+<pre><span class="n">movie</span> <span class="o">=</span> <span class="no">Kinata</span><span class="o">::</span><span class="no">Movie</span><span class="o">.</span><span class="n">new</span> <span class="n">c</span><span class="o">.</span><span class="n">movies</span><span class="o">.</span><span class="n">first</span><span class="o">[</span><span class="s1">'id'</span><span class="o">]</span>
+
+<span class="n">movie</span><span class="o">.</span><span class="n">name</span> <span class="c1"># "Весели крачета 2"</span>
+
+<span class="n">movie</span><span class="o">.</span><span class="n">genre</span> <span class="c1"># "анимация"</span>
+</pre>
+</div>
+
+
+<h3>Methods on movie</h3>
+
+<ul>
+<li>name</li>
+<li>image</li>
+<li>language</li>
+<li>translation</li>
+<li>genre</li>
+<li>trailer</li>
+<li>original_title</li>
+<li>features</li>
+<li>comment</li>
+<li>lead</li>
+<li>description</li>
+<li>cinemas</li>
+</ul><h1>Author</h1>
+
+<ul>
+<li>Name    - Mitko Kostov</li>
+<li>Email   - mitko.kostov@gmail.com</li>
+<li>Blog    - <a href="http://fireinside.me">http://fireinside.me</a>
+</li>
+<li>Twitter - <a href="" title="https://twitter.com/mytrile">mytrile</a> </li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Kinata maintained by <a href="https://github.com/mytrile">mytrile</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
