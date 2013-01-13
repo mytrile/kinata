@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
     "lib/kinata.rb",
     "lib/kinata/cinema.rb",
     "lib/kinata/movie.rb",
+    "lib/kinata/movies.rb",
     "lib/kinata/version.rb",
     "spec/kinata_spec.rb"
   ]

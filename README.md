@@ -22,7 +22,7 @@ Available cinemas:
 * :dom_na_kinoto
 
 
-```` ruby    
+```` ruby
 cinema = Kinata::Cinema.new :arena_zapad
 
 cinema.name # Арена Запад
@@ -34,9 +34,14 @@ cinema.phone # "028127700"
 cinema.coordinates # ["23290334", "42705008"]
 
 cinema.movies # [{"name"=>"Весели крачета 2", "id"=>"69921", "dates"=> ["2012-01-30 11:40:00", "2012-01-30 13:40:00", "2012-01-30 15:40:00"]}
-
 ````
 ## Movies
+
+```` ruby
+movies = Kinata::Movies.new
+movie.list # Списък с филмите
+````
+## Movie
 
 ```` ruby
 movie = Kinata::Movie.new c.movies.first['id']
@@ -66,4 +71,4 @@ movie.genre # "анимация"
 * Name    - Mitko Kostov
 * Email   - mitko.kostov@gmail.com
 * Blog    - <http://fireinside.me>
-* Twitter - [mytrile]("https://twitter.com/mytrile") 
+* Twitter - [mytrile]("https://twitter.com/mytrile")
